@@ -17,13 +17,14 @@ allowed-tools: run_command, run_background, wait_for_job, job_output
 ### 步骤
 
 1. 确认 `.fs` 比特流文件路径
-2. 确认 `%GOWIN_HOME%` 环境变量
-3. 运行:
+2. 扫描已连接的FPGA设备，确认设备型号
+3. 确认 `%GOWIN_HOME%` 环境变量
+4. 运行:
 ```
 %GOWIN_HOME%\Programmer\bin\programmer_cli.exe --device <DEVICE> --operation_index 2 --fsFile <path_to_fs>
 ```
-4. 等待下载完成（约 5-10 秒）
-5. 检查输出: `User Code: 0x...` 和 `Status Code: 0x...` 表示成功
+5. 等待下载完成（约 5-10 秒）
+6. 检查输出: `User Code: 0x...` 和 `Status Code: 0x...` 表示成功
 
 ### 其他操作
 
